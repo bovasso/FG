@@ -1,0 +1,36 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Category
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: category
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=name'
+          - project_list
+          - body
+        sort:
+          - name
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - name
+          - body
+      form:
+        display:
+          NONE: [name]
+          Body: [body]
+          'Case Studies': [project_list]
+        class: CategoryAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

@@ -1,0 +1,47 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: ProjectVideo
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: project_video
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_featured:
+          label: Featured
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=name'
+          - project
+          - url
+          - body
+          - is_featured
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - name
+          - is_featured
+          - is_active
+          - url
+          - body
+          - project
+      form:
+        display:
+          NONE: [name, is_featured, is_active, project]
+          Body: [body]
+          Others: [url]
+        class: ProjectVideoAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

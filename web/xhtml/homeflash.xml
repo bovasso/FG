@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fghomeflash>
+	<transitions>	
+		<transition type="3thumbs">content/transitions/blinkie.swf</transition>
+		<transition type="3thumbs">content/transitions/artist_pulls_down.swf</transition>
+		<transition type="3thumbs">content/transitions/horeveal.swf</transition>
+		<transition type="3thumbs">content/transitions/radio_waves.swf</transition>
+		<transition type="full">content/transitions/artist_pulls_down.swf</transition>
+		<transition type="full">content/transitions/blinkie.swf</transition>
+		<transition type="full">content/transitions/horeveal.swf</transition>
+		<transition type="full">content/transitions/radio_waves.swf</transition>
+	</transitions>
+	<caseset type="3thumbs">
+		<mainset>
+			<flashfile>content/titles/madeyoulook.swf</flashfile>	
+			<url>http://www.msn.com</url>
+		</mainset>		
+		<thumbtitle>EXAMPLES OF GREAT PARTNERSHIPS:</thumbtitle>
+		<thumbset id="1">
+			<titletext>The-N.com redesign</titletext>
+			<desctext>Making the NYC Arts destination truly the destination for arts in NYC</desctext>
+			<imagefile>content/thumbs/the_N.jpg</imagefile>
+			<url>http://www.yahoo.com</url>
+		</thumbset>
+		<thumbset id="2">
+			<titletext>Carnegie Hall Honor Website</titletext>
+			<desctext>Bringing order to the Hill</desctext>
+			<imagefile>content/thumbs/carnegie_timeline.jpg</imagefile>
+			<url>http://www.hotmail.com</url>
+		</thumbset>	
+		<thumbset id="3">
+			<titletext>The Electric Company DVD website</titletext>
+			<desctext>Bringing life to some of the most powerful imagery in the world</desctext>
+			<imagefile>content/thumbs/tec.jpg</imagefile>
+			<url>http://www.funnygarbage.com</url>
+		</thumbset>	
+	</caseset>
+	<caseset type="3thumbs">
+		<mainset>
+			<flashfile>content/titles/language.swf</flashfile>	
+			<url>http://www.msn.com</url>
+		</mainset>		
+		<thumbtitle>EXAMPLES OF GREAT PARTNERSHIPS:</thumbtitle>
+		<thumbset id="1">
+			<titletext>The-N.com redesign</titletext>
+			<desctext>Making the NYC Arts destination truly the destination for arts in NYC</desctext>
+			<imagefile>content/thumbs/the_N.jpg</imagefile>
+			<url>http://www.yahoo.com</url>
+		</thumbset>
+		<thumbset id="2">
+			<titletext>Carnegie Hall Honor Website</titletext>
+			<desctext>Bringing order to the Hill</desctext>
+			<imagefile>content/thumbs/carnegie_timeline.jpg</imagefile>
+			<url>http://www.hotmail.com</url>
+		</thumbset>	
+		<thumbset id="3">
+			<titletext>The Electric Company DVD website</titletext>
+			<desctext>Bringing life to some of the most powerful imagery in the world</desctext>
+			<imagefile>content/thumbs/tec.jpg</imagefile>
+			<url>http://www.funnygarbage.com</url>
+		</thumbset>	
+	</caseset>
+	<caseset type="3thumbs">
+		<mainset>
+			<flashfile>content/titles/backend.swf</flashfile>	
+			<url>http://www.msn.com</url>
+		</mainset>		
+		<thumbtitle>EXAMPLES OF GREAT PARTNERSHIPS:</thumbtitle>
+		<thumbset id="1">
+			<titletext>The-N.com redesign</titletext>
+			<desctext>Making the NYC Arts destination truly the destination for arts in NYC</desctext>
+			<imagefile>content/thumbs/the_N.jpg</imagefile>
+			<url>http://www.yahoo.com</url>
+		</thumbset>
+		<thumbset id="2">
+			<titletext>Carnegie Hall Honor Website</titletext>
+			<desctext>Bringing order to the Hill</desctext>
+			<imagefile>content/thumbs/carnegie_timeline.jpg</imagefile>
+			<url>http://www.hotmail.com</url>
+		</thumbset>	
+		<thumbset id="3">
+			<titletext>The Electric Company DVD website</titletext>
+			<desctext>Bringing life to some of the most powerful imagery in the world</desctext>
+			<imagefile>content/thumbs/tec.jpg</imagefile>
+			<url>http://www.funnygarbage.com</url>
+		</thumbset>	
+	</caseset>
+	<caseset type="full">
+		<mainset>
+			<flashfile>content/titles/madeyoulook.swf</flashfile>
+			<url></url>
+		</mainset>		
+	
+	</caseset>
+</fghomeflash>

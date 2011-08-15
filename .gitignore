@@ -1,0 +1,7 @@
+*.svn
+.DS_Store
+cache/*
+log/*
+web/uploads/*
+config/databases.yml
+config/ProjectConfiguration.class.php

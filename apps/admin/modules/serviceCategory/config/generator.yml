@@ -1,0 +1,36 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: ServiceCategory
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: service_category
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=name'
+          - service_list
+          - body
+        sort:
+          - name
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - name
+          - body
+      form:
+        display:
+          NONE: [name]
+          Body: [body]
+          Services: [service_list]
+        class: ServiceCategoryAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

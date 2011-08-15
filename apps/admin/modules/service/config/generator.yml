@@ -1,0 +1,40 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Service
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: service
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=name'
+          - service_category_id
+          - description
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - name
+          - is_active
+          - description
+          - service_category_id
+      form:
+        display:
+          NONE: [name, is_active, service_category_id]
+          Description: [description]
+        class: ServiceAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>  
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>About | Funny Garbage</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.corner.js"></script>
+</head>
+<body class="utility">
+  <div id="wrapper">
+    
+    <div id="header">
+      
+      <div id="search">
+        <p id="btn_search"><a href="#" title="Search" class="img_replace">Search</a></p>
+        <form method="post" action="#" style="display: none;">
+          <input type="text" name="query" />
+          <input type="submit" class="go_btn img_replace" value="Go" />
+        </form>
+        <script type="text/javascript">
+          $(function() {
+            $('p#btn_search a').click(function() { 
+              $(this).addClass('active');
+              $('#search form').show();
+              return false;
+            });
+          });
+          function mycarousel_initCallback(carousel) {
+            $('#about_carousel_next').bind('click', function() {
+              carousel.next();
+              return false;
+            });
+            $('#about_carousel_prev').bind('click', function() {
+              carousel.prev();
+              return false;
+            });
+          };
+          function about_menu(item) {
+            var parent = $(item).parent();
+            $('.about_menu_items li').removeClass('selected');
+            parent.addClass('selected');
+          }
+          
+          $(function() {
+            $('#about_carousel').jcarousel({
+              scroll: 1,
+              initCallback: mycarousel_initCallback,
+              // This tells jCarousel NOT to autobuild prev/next buttons
+              buttonNextHTML: null,
+              buttonPrevHTML: null
+            });
+            $('.recent_tweets').corner('15px');
+          });
+        </script>
+        <!--// END about header carousel -->
+      </div>
+      <!--// END search -->
+      
+      <h1><a href="#" id="logo" class="img_replace" title="Funny Garbage">Funny Garbage</a><span>Interactive experiences for entertainment, culture and commerce</span></h1>
+      <ul id="menu">
+        <li><a href="index.html" title="Home">Home</a></li>
+        <li><a href="about.html" title="About">About</a></li>
+        <li><a href="portfolio.html" title="Portfolio" class="active">Portfolio</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>
+        <li><a href="#" title="Jobs">Jobs</a></li>
+      </ul>
+      <!--// END menu -->
+      
+    </div>
+    <!--// END header -->
+    
+    <div id="content_wrapper">
+      <h3 class="shdr">About</h3>
+      <div id="about_carousel">
+        <ul>
+          <li>
+            <div class="make_it_work"><img src="img/txt820x63make_it_work.gif" /></div>
+            <div class="details">
+              <h3 class="title">24/7 Problem Solvers</h3>
+              <p>Based on our over fifteen years of launching interactive experiences, we know how to get it done. With a  proven methodology and a deeply experienced team, we can deliver complex projects across a variety of platforms and technologies.</p>
+            </div>
+          </li>
+          <li>
+            <div class="make_it_work"><img src="img/txt820x63make_it_work.gif" /></div>
+            <div class="details">
+              <h3 class="title">24/7 Problem Solvers</h3>
+              <p>Based on our over fifteen years of launching interactive experiences, we know how to get it done. With a  proven methodology and a deeply experienced team, we can deliver complex projects across a variety of platforms and technologies.</p>
+            </div>
+          </li>
+          <li>
+            <div class="make_it_work"><img src="img/txt820x63make_it_work.gif" /></div>
+            <div class="details">
+              <h3 class="title">24/7 Problem Solvers</h3>
+              <p>Based on our over fifteen years of launching interactive experiences, we know how to get it done. With a  proven methodology and a deeply experienced team, we can deliver complex projects across a variety of platforms and technologies.</p>
+            </div>
+          </li>
+        </ul>
+        <div class="carousel_buttons">
+          <a href="#" id="about_carousel_next" class="img_replace" title="Next">Next &raquo;</a>
+          <a href="#" id="about_carousel_prev" class="img_replace" title="Prev">&laquo; Prev</a>
+        </div>
+      </div>
+      <div id="sidebar">
+        <dl class="inner_sidebar filter_block">
+          <dd>
+            <ul class="about_menu_items">
+              <li class="selected"><a href="#overview" onclick="about_menu(this);">Overview</a></li>
+              <li><a href="#leadership" onclick="about_menu(this);">Leadership</a></li>
+              <li><a href="#services" onclick="about_menu(this);">Services</a></li>
+              <li><a href="#history" onclick="about_menu(this);">History</a></li>
+            </ul>
+          </dd>
+        </dl>
+        <div class="download_area">
+          <a href="#" class="img_replace download_btn">Download the FG one sheet</a>
+        </div>
+        <div class="recent_tweets">
+          <div class="tweets_title">Recent Tweets</div>
+          <div class="tweet">
+            <p>You'll suddenly want to have more secrets! YiTing Cheng's ingenius design for stashing valuables in plain sight: <a href="#">http://bit.ly/SECsTaSH</a></p>
+            <p class="time">about 3 hours ago via web</p>
+          </div>
+          <div class="tweet">
+            <p>What design can you come up with 140 characters? Twitter <a href="#">#ASCII</a> designs: <a href="#">http://bit.ly/cTzKyU</a></p>
+            <p class="time">about 3 hours ago via web</p>
+          </div>
+          <div class="tweet">
+            <p>Long exposure light painting with #iPad by Dentsu London: <a href="#">http://bit.ly/cfb05x</a></p>
+            <p class="time">about 3 hours ago via web</p>
+          </div>
+          
+          <a href="#" class="more">See More on Twitter</a>
+        </div>
+      </div>
+      <div id="content_right" class="about_content">
+        <div class="overview_content">
+          <h3 class="shdr" id="overview">Overview</h3>
+          <h4>FG is...</h4>
+          <p>a developer of websites, brands, games, social experiences, mobile apps, kiosks and interactive applications. We can deliver a project from concept through production and delivery. We produce stories, animation and video.</p>
+          <p>Our technical chops run the spectrum from Flash and HTML to open source technologies such as Drupal and Symfony. We're technologically agnostic and can adapt to the specific needs of a project or a client's standards.</p>
+          <h4>Why us...</h4>
+          <p>Our roots are firmly planted in the creative world, working with clients to create ground-breaking strategies for fusing old school content values with new school concepts and technologies.</p>
+          <p>Our work with leading entertainment outlets, cultural institutions and commerce companies demonstrates the creative thinking we bring to every project.</p>
+        </div>
+        <div class="leadership_content">
+          <h3 class="shdr" id="leadership">Leadership</h3>        
+          <ul>
+            <li>
+              <img src="img/img140x190leader.jpg" alt="" />
+              <div class="leader">
+                <div class="name">John Carlin</div>
+                <p class="job">President &amp; Chief Executive Officer</p>
+                <p>John's background in law, business, art and popular culture helped established the company as leader in the business of interactive media. John produced the PBS documentary "Imagining America" and curated "Masters of American Comics" one of the first major museum exhibitions to showcase the art of comic strips, comic books and graphic novels</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/img140x190leader.jpg" alt="" />
+              <div class="leader">
+                <div class="name">Kristin Ellington</div>
+                <p class="job">Chief Operating Officer</p>
+                <p>Not just your average C.O.O., but also an Executive Producer of all the premier FG projects. Truly the motor powering FG's daily operations, Kristin has been with FG since its formation, managing the growth of the company from a small design studio into a full-scale production and content development business with a global clientele.</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/img140x190leader.jpg" alt="" />
+              <div class="leader">
+                <div class="name">Kristin Ellington</div>
+                <p class="job">Chief Operating Officer</p>
+                <p>Not just your average C.O.O., but also an Executive Producer of all the premier FG projects. Truly the motor powering FG's daily operations, Kristin has been with FG since its formation, managing the growth of the company from a small design studio into a full-scale production and content development business with a global clientele.</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/img140x190leader.jpg" alt="" />
+              <div class="leader">
+                <div class="name">Kristin Ellington</div>
+                <p class="job">Chief Operating Officer</p>
+                <p>Not just your average C.O.O., but also an Executive Producer of all the premier FG projects. Truly the motor powering FG's daily operations, Kristin has been with FG since its formation, managing the growth of the company from a small design studio into a full-scale production and content development business with a global clientele.</p>
+              </div>
+            </li>
+            <li>
+              <img src="img/img140x190leader.jpg" alt="" />
+              <div class="leader">
+                <div class="name">Kristin Ellington</div>
+                <p class="job">Chief Operating Officer</p>
+                <p>Not just your average C.O.O., but also an Executive Producer of all the premier FG projects. Truly the motor powering FG's daily operations, Kristin has been with FG since its formation, managing the growth of the company from a small design studio into a full-scale production and content development business with a global clientele.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="services_content">
+          <h3 class="shdr" id="services">Services</h3>
+          <div class="creative_services">
+            <ul>
+              <li class="title">Creative</li>
+              <li><a href="#">Creative direction</a></li>
+              <li><a href="#">Brand identity</a></li>
+              <li><a href="#">Copy writing</a></li>
+              <li><a href="#">Art direction</a></li>
+              <li><a href="#">Logo design</a></li>
+              <li><a href="#">Character development</a></li>
+              <li><a href="#">Animation</a></li>
+              <li><a href="#">Style guide development</a></li>
+            </ul>
+            <ul class="technology">
+              <li class="title">Technology</li>
+              <li><a href="#">Technology strategy</a></li>
+              <li><a href="#">System architecture definition</a></li>
+              <li><a href="#">Open source development</a></li>
+              <li><a href="#">Web and app development</a></li>
+              <li><a href="#">Content Management Systems</a></li>
+              <li><a href="#">Quality assurance testing</a></li>
+            </ul>
+          </div>
+          <div class="product_services">
+            <ul class="user_experience">
+              <li class="title">User Experience</li>
+              <li><a href="#">Information architecture</a></li>
+              <li><a href="#">Prototype development</a></li>
+              <li><a href="#">Focus group testing</a></li>
+              <li><a href="#">Usability testing</a></li>
+            </ul>
+            <ul>
+              <li class="title">Product Planning</li>
+              <li><a href="#">Competitive analysis &amp; positioning</a></li>
+              <li><a href="#">Strategic direction</a></li>
+              <li><a href="#">Content analysis strategy</a></li>
+            </ul>
+            <ul>
+              <li class="title">Project Management</li>
+              <li><a href="#">Waterfall</a></li>
+              <li><a href="#">Agile</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="history">
+          <h3 class="shdr" id="history">History</h3>
+          <div class="history_content">
+            <p class="founded">Funny Garbage was founded at the dawn of the consumer internet era as a firm of like-minded creative individuals excited about the possibilities of harnessing new technologies to serve clients, create great content and have fun in the process.</p>
+            <p>Founders John Carlin and Peter Gerardi were intrigued by the new medium and the ability to pioneer techniques for creating content and telling stories.  After rolling the first corporate purchase (an Apple Macintosh LCIII) to their first office on Spring Street in SOHO, John and Peter began developing online campaigns for clients such as Nike and Compaq Computer.  An assignment to develop Cartoon Network's first website was a dream job for the firm, providing an opportunity to combine a love of cartoons, animation and creation of a new online channel for the Turner network's content.</p>
+            <p>As adoption of the internet by companies looking to reach consumers directly grew, we grew right along with it.  Work created for Comedy Central, VH1, AMC, IFC and Nickelodeon highlighted our growing creative and technology skills as well as the methodology we developed to provide clients with a clear and predictable project path.</p>
+            <p>From our start, we have been focused on balancing our corporate work with projects for cultural institutions and non-profit organizations. Award winning work with clients such as the Smithsonian Institution, The Rose Center for Earth and Space at the American Museum of Natural History, the Whitney Museum for American Art, the New York Alliance for the Arts and PBS highlight our commitment and expertise.</p>
+            <p>The most important aspect of the firm, unchanged since its founding, is our work environment.  We have created a great environment where people stay, collaborate with each other and grow as the industry and medium grows.  Today Funny Garbage is a firm of over 35 professionals located in New York City, focused on developing creative solutions to clients' business opportunities and issues.</p>
+          </div>
+        </div>
+        <div class="awards">
+          <h3 class="shdr" id="awards">Awards</h3>
+          <div class="awards_content">
+            <ul>
+              <li><span>12:</span> Webby Nominations</li>
+              <li><span>7:</span> Webby Winners</li>
+              <li><span>2:</span> Emmy Awards</li>
+              <li><span>12:</span> Communicator Awards</li>
+              <li><span>2:</span> Global Media Nominations</li>
+              <li><span>3:</span> Muse Awards</li>
+              <li><span>2:</span> The Mark Awards</li>
+              <li><span>4:</span> Interactive Media Awards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--// END content wrapper -->
+  
+    <div id="footer">
+      <ul class="join_us">
+        <li>Join us on:</li>
+        <li><a href="#" title="Facebook" id="facebook" class="img_replace">Facebook</a></li>
+        <li><a href="#" title="My Space" id="my_space" class="img_replace">My Space</a></li>
+        <li><a href="#" title="Flickr" id="flickr" class="img_replace">Flickr</a></li>
+      </ul>
+      <p>112 Madison Ave New York, NY 10016</p>
+      <p>v. 212-343-2534 | f. 212-343-3645  <a href="mailto:info@funnygarbage.com">info@funnygarbage.com</a></p>
+    </div>
+    <!--// END footer -->
+  
+  </div>
+  <!--// END wrapper -->
+  
+</body>
+</html>

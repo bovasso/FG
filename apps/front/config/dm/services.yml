@@ -1,0 +1,3 @@
+parameters:
+  link_tag_page.options:  
+    current_class: dm_current

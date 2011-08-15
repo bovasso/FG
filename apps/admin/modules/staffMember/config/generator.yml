@@ -1,0 +1,46 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: StaffMember
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: staff_member
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=name'
+          - photo
+          - title
+          - department
+          - bio
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - name
+          - is_active
+          - title
+          - department
+          - bio
+          - photo
+      form:
+        display:
+          NONE: [name, is_active]
+          Photo: [photo_form, photo_view]
+          Bio: [bio]
+          Others: [title, department]
+        class: StaffMemberAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

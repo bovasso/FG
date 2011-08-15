@@ -1,0 +1,195 @@
+Category:  
+  columns:  
+    name:             { type: string(255), notnull: true }  
+    body:             { type: clob, extra: markdown }
+    
+ProjectVideo: 
+  actAs:  
+    DmSortable:
+  columns:  
+    name:             { type: string(255), notnull: true }  
+    url:              { type: string(255), notnull: true }
+    body:             { type: clob, extra: markdown }
+    project:          { type: integer, notnull: false }
+    is_featured:      { type: boolean, notnull: false, default: false } 
+    is_active:        { type: boolean, notnull: true, default: false }
+  relations:
+    Project:          
+      foreignAlias:   ProjectVideo  
+      local:          project
+
+Client:
+  actAs:  
+    DmSortable:  
+  columns:  
+    title:         { type: string(120), notnull: true } 
+    description:   { type: clob, extra: markdown }  
+    logo:          { type: integer }  
+    is_active:     { type: boolean, notnull: true, default: false }
+  relations:  
+    Logo:  
+      class:          DmMedia  
+      local:          logo  
+      foreignAlias:   Client
+    
+Project:
+  actAs:  
+    DmSortable:
+    DmTaggable:
+    DmGallery:
+      form_class:     ProjectDmMediaForm
+  columns:  
+    title:            { type: string(120), notnull: true }  
+    category_id:      { type: integer, notnull: true }
+    extract:          { type: string(300), notnull: false, extra: markdown } 
+    overview:         { type: string(2000), notnull: true, extra: markdown } 
+    launch_date:      { type: string(60), notnull: false }
+    url:              { type: string(200), extra: link } 
+    awards:           { type: string(500), extra: markdown }
+    screenshot:       { type: integer }  
+    thumbnail:        { type: integer }  
+    client:           { type: integer, notnull: true } 
+    client_2:         { type: integer, notnull: false } 
+    client_3:         { type: integer, notnull: false } 
+    is_featured:      { type: boolean, notnull: false, default: false } 
+    is_active:        { type: boolean, notnull: true, default: false }
+  relations:
+    Screenshot:  
+      class:          DmMedia  
+      local:          screenshot  
+      foreignAlias:   Project
+    Thumbnail:  
+      class:          DmMedia  
+      local:          thumbnail 
+      foreignAlias:   Project
+    Client:  
+      class:          Client  
+      local:          client  
+      foreignAlias:   Project 
+    Client2:  
+      class:          Client  
+      local:          client_2  
+      foreignAlias:   Project
+    Client3:  
+      class:          Client  
+      local:          client_3  
+      foreignAlias:   Project
+    Category:  
+      foreignAlias:   Project
+
+DmUser:  
+  columns:  
+    description:   { type: clob, extra: markdown }  
+    photo:         { type: integer }  
+  relations:  
+    Photo:  
+      class:          DmMedia  
+      local:          photo  
+      foreignAlias:   DmUser  
+          
+DmContact: 
+  columns:  
+    email_subject:    { type: string(255), notnull: true }
+    email_category:   { type: enum, values: ['New Business', 'Original Content', 'Other'] } 
+    other_desc:       { type: string(255)}
+    phone:            { type: string(255), notnull: true }
+
+JobPosition:
+  actAs:
+    Timestampable:
+  columns:  
+    name:               { type: string(255), notnull: true }  
+    department:         { type: enum, values: ['Design','Project Management', 'Technology', 'User Experience Design/IA'] } 
+    description:        { type: clob, extra: markdown }
+    qualifications:     { type: clob, extra: markdown }
+    tech_experience:    { type: clob, extra: markdown }
+    additional_areas:   { type: clob, extra: markdown }
+    required_skills:    { type: clob, extra: markdown }
+    time_reqs:          { type: clob, extra: markdown }
+    is_active:          { type: boolean, notnull: true, default: false }
+
+JobApplication:
+  actAs:
+    Timestampable:
+  columns:
+    first_name:         { type: string(255), notnull: true }
+    last_name:          { type: string(255), notnull: true }
+    job_position_id:    { type: integer, notnull: true } 
+    address:            { type: string(255), notnull: true }
+    city:               { type: string(255), notnull: true }
+    state:              { type: enum, values: ['--','AL','AZ','AR','CA','CO','CT','DE','FL','GA','HI','IA','ID','IL','IN','KS','KY','LA','MA','ME','MD','MI','MN','MO','MS','MT','NE','NC','ND','NJ','NM','NV','NY','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VA','VT','WA','WI','WV','WY'], notnull: true }
+    zip:                { type: string(255), notnull: true }
+    phone:              { type: string(255), notnull: false }
+    email:              { type: string(255), notnull: true }
+    website:            { type: string(255), notnull: true }
+    resume:             { type: integer, notnull: true }
+    objective:          { type: clob, extra: markdown }
+    links:              { type: clob, extra: markdown }
+    cover_letter:       { type: clob, extra: markdown }
+  relations:  
+    Resume:  
+      class:          DmMedia  
+      local:          resume  
+      foreignAlias:   JobApplication
+    JobPosition:           
+      local:          job_position_id  
+      foreignAlias:   JobApplication
+      
+StaffMember:
+  actAs:  
+    DmSortable:
+  columns:  
+    name:               { type: string(255), notnull: true }  
+    title:              { type: string(255), notnull: true }  
+    department:         { type: enum, values: ['Design','Project Management', 'Technology', 'User Experience Design/IA'] } 
+    bio:                { type: clob, extra: markdown }
+    photo:              { type: integer } 
+    is_active:          { type: boolean, notnull: true, default: false }
+  relations:  
+    Photo:  
+      class:          DmMedia  
+      local:          photo  
+      foreignAlias:   StaffMember
+      
+ServiceCategory:  
+  columns:  
+    name:             { type: string(255), notnull: true }  
+    body:             { type: clob, extra: markdown }
+
+Service:
+  actAs:  
+    DmSortable:
+  columns:
+    name:                 { type: string(255), notnull: true }  
+    description:          { type: clob, extra: markdown }
+    service_category_id:  { type: integer, notnull: true }
+    is_active:            { type: boolean, notnull: true, default: false }
+  relations:
+    ServiceCategory:  
+      foreignAlias:   Service
+      
+AboutSlideshow:
+  actAs:  
+    DmSortable:
+    Timestampable:
+  columns:
+    title:            { type: string(255), notnull: true }  
+    subtitle:         { type: string(255), notnull: true }
+    description:      { type: clob, extra: markdown }  
+    is_active:        { type: boolean, notnull: true, default: false }   
+    
+Page:
+  actAs:  
+    DmSortable:
+    Timestampable:
+    DmTaggable:
+  columns:
+    title:            { type: string(255), notnull: true }  
+    body:             { type: clob, extra: markdown }  
+    photo:            { type: integer } 
+    is_active:        { type: boolean, notnull: true, default: false }
+  relations:
+    Photo:  
+      class:          DmMedia  
+      local:          photo  
+      foreignAlias:   Page

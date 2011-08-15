@@ -1,0 +1,145 @@
+Content:  
+  
+  Global:  
+    
+    main:  
+      components:  
+        header:  
+        footer:
+        flashFeature:
+        aboutSidebar:
+        aboutHistory:
+        aboutAwards:
+        aboutOverview:
+    
+  Portfolio:
+    
+    category:  
+      model:                  Category  
+      page:                   true  
+      name:                   Category|Categories  
+      components:  
+        list:  
+        show:
+
+    client:  
+      model:                  Client  
+      page:                   true  
+      name:                   Client|Clients 
+      components:  
+        list:  
+        show:
+        listWithProjects:
+    
+    project:  
+      parent:                 category          # module key  
+      page:                   true              # each Product record has a page in front app  
+      name:                   Case Study|Case Studies # singular name|plural name  
+      components:   
+        list:                                   # but varies on each page ( recommended )  
+        listRelated:
+          filters:            [ category ]      # front list filters
+        listPager:
+        show:    
+        listByCategory:                         # list of products for one category  
+          filters:            [ category ]      # front list filters
+        listByClient:                         # list of products for one category  
+          filters:            [ client ]
+        listByClientTitle:                    # list of products for one category  
+          filters:            [ client ]      # front list filters
+        listFeaturedByCategory:                         # list of products for one category  
+          filters:            [ category ]      # front list filters
+        listFeatured:
+  
+    project_video:  
+      parent:                 project          # module key  
+      page:                   true              # each Product record has a page in front app  
+      name:                   Case Study Video | Case Study Video # singular name|plural name  
+      components:   
+        list:                                   # but varies on each page ( recommended )  
+        show:    
+        listByProject:                         # list of products for one category  
+          filters:            [ project ]      # front list filters
+        
+
+  Feedback:
+
+    dmContact:
+      name:                   Contact
+      actions:
+        form:
+
+    job_position:
+      model:                  JobPosition
+      name:                   Job | Jobs # singular name|plural name 
+      page:                   true
+      components:  
+        list:  
+        show: 
+        listByDept: 
+          filters:            [ department ]
+    
+    job_application:
+      parent:                 job_position
+      model:                  JobApplication
+      name:                   Job Application | Job Applications # singular name|plural name 
+      page:                   true
+      components: 
+        show:                 [ job_position ]
+      actions:
+        form:
+ 
+  System:
+
+    Security:
+
+      dmUser:
+
+        components:
+          myAccount:
+            cache:              false
+  
+  About:
+
+    staff_member:
+      model:                  StaffMember
+      name:                   Employee | Staff # singular name|plural name 
+      page:                   true
+      components:  
+        list:  
+        show: 
+        listByDept: 
+          filters:            [ department ]
+    
+    service:
+      model:                  Service
+      name:                   Service | Services # singular name|plural name 
+      components:  
+        list:  
+        show: 
+        listByServiceCategory: 
+          filters:              [ service_category ]
+
+    service_category:  
+      model:                  ServiceCategory  
+      page:                   true  
+      name:                   Service Category| Service Categories  
+      components:  
+        list:  
+        show:
+  
+    about_slideshow:
+      model:                  AboutSlideshow
+      name:                   About Slide | About Slideshow # singular name|plural name 
+      components:  
+        list:  
+        show: 
+          
+    page:
+      model:                  Page
+      name:                   Page | Pages # singular name|plural name 
+      components:  
+        list:  
+        show:
+
+    

@@ -1,0 +1,65 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Project
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: project
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        tags_list:
+          label: Tags
+        is_featured:
+          label: Featured
+        is_active:
+          label: Active
+        dm_gallery: Gallery
+      list:
+        display:
+          - '=title'
+          - screenshot
+          - client
+          - category_id
+          - tags_list
+          - launch_date
+          - is_featured
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - title
+          - is_featured
+          - is_active
+          - category_id
+          - launch_date
+          - url
+          - awards
+          - screenshot
+          - thumbnail
+          - client
+          - client_2
+          - client_3
+      form:
+        display:
+          NONE: [title, is_featured, is_active, category_id, client, client_2, client_3]
+          Overview: [overview]
+          Extract: [extract]
+          Screenshot: [screenshot_form, screenshot_view]
+          Thumbnail: [thumbnail_form, thumbnail_view]
+          Gallery: [dm_gallery]
+          Others: [launch_date, url, awards]
+          Tags: [tags]
+          'Case Studie Videos': [project_video_list]
+        class: ProjectAdminForm
+        fields:
+          url: { is_link: true, help: 'Drag & drop a page here from the PAGES panel, or write an url' }
+      edit: ~
+      new: ~

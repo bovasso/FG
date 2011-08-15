@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>  
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<title>Home | Funny Garbage</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" media="screen" charset="utf-8" />
+<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.corner.js"></script>
+
+</head>
+<body id="home">
+  <div id="wrapper">
+    
+    <div id="hp_carousel">
+      <span class="latest img_replace">The Latest</span>
+      <ul>
+        <li>FG Wins Webby for Alliance for the Arts <a href="http://afta.org" target="_blank">http://afta.org</a>,   Funny Garbage is hanging at the Coney Island Benefit,  FG is lovin the beautiful</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+        <li>FG Wins Webby for Alliance for the Arts <a href="http://afta.org" target="_blank">http://afta.org</a>,   Funny Garbage is hanging at the Coney Island Benefit,  FG is lovin the beautiful</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</li>
+      </ul>
+      <a href="#" id="hp_carousel_next" class="img_replace" title="Next">Next &raquo;</a>
+      <a href="#" id="hp_carousel_prev" class="img_replace" title="Prev">&laquo; Prev</a>
+    </div>
+    <script type="text/javascript">
+    function mycarousel_initCallback(carousel) {
+        $('#hp_carousel_next').bind('click', function() {
+            carousel.next();
+            return false;
+        });
+        $('#hp_carousel_prev').bind('click', function() {
+            carousel.prev();
+            return false;
+        });
+    };
+    
+    $(function() {
+        $('#hp_carousel').jcarousel({
+            scroll: 1,
+            initCallback: mycarousel_initCallback,
+            // This tells jCarousel NOT to autobuild prev/next buttons
+            buttonNextHTML: null,
+            buttonPrevHTML: null
+        });
+    });
+    
+    </script>
+    <!--// END hp carousel -->
+    
+    <div id="header">
+      <h1><a href="#" id="logo" class="img_replace" title="Funny Garbage">Funny Garbage</a><span>Interactive experiences for entertainment, culture and commerce</span></h1>
+      <ul id="menu">
+        <li><a href="#" title="Home" class="active">Home</a></li>
+        <li><a href="#" title="About">About</a></li>
+        <li><a href="portfolio.html" title="Portfolio">Portfolio</a></li>
+        <li><a href="#" title="Contact">Contact</a></li>
+        <li><a href="#" title="Jobs">Jobs</a></li>
+      </ul>
+      <!--// END menu -->
+    
+    </div>
+    <!--// END header -->
+    
+    <div id="content_wrapper">
+      <ul id="hp_proj">
+        <li class="proj first">
+          <p class="title"><img src="img/bg32x25blue_arrow_down.png" alt="Arrow Down" class="arrow" />Three brand spanking new sites blast into the webiverse!</p>
+          <h2>Just Launched</h2>
+          <ul class="hp_proj_content">
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_1.jpg" alt="The-N.com redesign" /></a>
+              <h3><a href="#" title="The-N.com redesign">The-N.com redesign</a></h3>
+              <div class="desc">Making the NYC Arts destination truly the destination for arts in NYC</div>
+            </li>
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_2.jpg" alt="Carnegie Hall Honor Website" /></a>
+              <h3><a href="#" title="Carnegie Hall Honor Website">Carnegie Hall Honor Website</a></h3>
+              <div class="desc">Bringing order to the Hill</div>
+            </li>
+            <li class="content last">
+              <a href="#"><img src="img/img298x131portofolio_3.jpg" alt="PBS Dash" /></a>
+              <h3><a href="#" title="PBS Dash">PBS Dash</a></h3>
+              <div class="desc">Bringing life to some of the most powerful imagery in the world</div>
+            </li>
+          </ul>
+        </li>
+      
+        <li class="proj">
+          <p class="title"><img src="img/bg32x25blue_arrow_down.png" alt="Arrow Down" class="arrow" />Succesful projects begin with great partnerships</p>
+          <h2>We speak your language</h2>
+          <ul class="hp_proj_content">
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_1.jpg" alt="The-N.com redesign" /></a>
+              <h3><a href="#" title="The-N.com redesign">The-N.com redesign</a></h3>
+              <div class="desc">Making the NYC Arts destination truly the destination for arts in NYC</div>
+            </li>
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_2.jpg" alt="Carnegie Hall Honor Website" /></a>
+              <h3><a href="#" title="Carnegie Hall Honor Website">Carnegie Hall Honor Website</a></h3>
+              <div class="desc">Bringing order to the Hill</div>
+            </li>
+            <li class="content last">
+              <a href="#"><img src="img/img298x131portofolio_3.jpg" alt="PBS Dash" /></a>
+              <h3><a href="#" title="PBS Dash">PBS Dash</a></h3>
+              <div class="desc">Bringing life to some of the most powerful imagery in the world</div>
+            </li>
+          </ul>
+        </li>
+      
+        <li class="proj">
+          <p class="title"><img src="img/bg32x25blue_arrow_down.png" alt="Arrow Down" class="arrow" />Recent Webby and Communicator Awards</p>
+          <h2>OMFG: awards galore</h2>
+          <ul class="hp_proj_content">
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_1.jpg" alt="Smithsonian Ocean Portal" /></a>
+              <h3><a href="#" title="Smithsonian Ocean Portal">Smithsonian Ocean Portal</a></h3>
+              <div class="desc">
+                <ul>
+                  <li>Webby People's Voice Winner</li>
+                  <li>Communicator Award Gold (Charitable Organization)</li>
+                  <li>Communicator Award Gold (Non-Profit &amp; Cultural Institution)</li>
+                </ul>
+              </div>
+            </li>
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_2.jpg" alt="Us Weekly Magazine Website" /></a>
+              <h3><a href="#" title="Us Weekly Magazine Website">Us Weekly Magazine Website</a></h3>
+              <div class="desc">
+                <ul>
+                  <li>Webby Honoree</li>
+                  <li>Communicator Award Silver</li>
+                </ul>
+              </div>
+            </li>
+            <li class="content last">
+              <a href="#"><img src="img/img298x131portofolio_2.jpg" alt="WB Batman:" /></a>
+              <h3><a href="#" title="WB Batman:">WB Batman:</a></h3>
+              <div class="desc">
+                <ul>
+                  <li>Communicator Award Silver</li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      
+        <li class="proj">
+          <p class="title"><img src="img/bg32x25blue_arrow_down.png" alt="Arrow Down" class="arrow" />Technology Agnostic Since 1996</p>
+          <h2>Show us your backend</h2>
+          <ul class="hp_proj_content">
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_1.jpg" alt="The-N.com redesign" /></a>
+              <h3><a href="#" title="The-N.com redesign">The-N.com redesign</a></h3>
+              <div class="desc">Making the NYC Arts destination truly the destination for arts in NYC</div>
+            </li>
+            <li class="content">
+              <a href="#"><img src="img/img298x131portofolio_2.jpg" alt="Carnegie Hall Honor Website" /></a>
+              <h3><a href="#" title="Carnegie Hall Honor Website">Carnegie Hall Honor Website</a></h3>
+              <div class="desc">Bringing order to the Hill</div>
+            </li>
+            <li class="content last">
+              <a href="#"><img src="img/img298x131portofolio_3.jpg" alt="PBS Dash" /></a>
+              <h3><a href="#" title="PBS Dash">PBS Dash</a></h3>
+              <div class="desc">Bringing life to some of the most powerful imagery in the world</div>
+            </li>
+          </ul>
+        </li>
+      
+        <li class="proj last">
+          <p class="title"><img src="img/bg32x25blue_arrow_down.png" alt="Arrow Down" class="arrow" />Raise your aquatic awareness with the Smithsonian's Ocean Portal</p>
+          <h2>OCEAN COMMOTION</h2>
+          <ul class="hp_proj_content">
+            <li class="content one_proj">
+              <a href="#"><img src="img/img298x131portofolio_1.jpg" alt="The Ocean Portal" /></a>
+              <h3><a href="#" title="The Ocean Portal">The Ocean Portal</a></h3>
+              <div class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <script type="text/javascript">
+        $(function() {
+          $('ul#hp_proj p.title').corner('15px');
+        });
+      </script>
+      <!--// END hp proj -->
+      
+    </div>
+    <!--// END content wrapper -->
+  
+    <div id="footer">
+      <ul class="join_us">
+        <li>Join us on:</li>
+        <li><a href="#" title="Facebook" id="facebook" class="img_replace">Facebook</a></li>
+        <li><a href="#" title="My Space" id="my_space" class="img_replace">My Space</a></li>
+        <li><a href="#" title="Flickr" id="flickr" class="img_replace">Flickr</a></li>
+      </ul>
+      <p>112 Madison Ave New York, NY 10016</p>
+      <p>v. 212-343-2534 | f. 212-343-3645  <a href="mailto:info@funnygarbage.com">info@funnygarbage.com</a></p>
+    </div>
+    <!--// END footer -->
+  
+  </div>
+  <!--// END wrapper -->
+  
+</body>
+</html>

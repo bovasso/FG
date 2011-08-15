@@ -1,0 +1,62 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: JobPosition
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: job_position
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=name'
+          - job_application_list
+          - department
+          - description
+          - qualifications
+          - tech_experience
+          - additional_areas
+          - required_skills
+          - time_reqs
+          - is_active
+          - created_at
+          - updated_at
+        sort:
+          - created_at
+          - desc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - name
+          - is_active
+          - department
+          - description
+          - qualifications
+          - tech_experience
+          - additional_areas
+          - required_skills
+          - time_reqs
+          - created_at
+          - updated_at
+      form:
+        display:
+          NONE: [name, is_active]
+          Description: [description]
+          Qualifications: [qualifications]
+          'Tech experience': [tech_experience]
+          'Additional areas': [additional_areas]
+          'Required skills': [required_skills]
+          'Time reqs': [time_reqs]
+          'Job Applications': [job_application_list]
+          Others: [department]
+        class: JobPositionAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

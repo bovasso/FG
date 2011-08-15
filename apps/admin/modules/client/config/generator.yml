@@ -1,0 +1,42 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: Client
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: client
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields:
+        is_active:
+          label: Active
+      list:
+        display:
+          - '=title'
+          - logo
+          - project_list
+          - is_active
+        sort:
+          - position
+          - asc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: true
+      filter:
+        display:
+          - title
+          - is_active
+          - description
+          - logo
+      form:
+        display:
+          NONE: [title, is_active]
+          Logo: [logo_form, logo_view]
+          Description: [description]
+          'Case Studies': [project_list]
+        class: ClientAdminForm
+        fields: {  }
+      edit: ~
+      new: ~

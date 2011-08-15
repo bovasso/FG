@@ -1,0 +1,22 @@
+default:
+  
+  http_metas:
+    content-type: text/html
+
+  stylesheets:
+    - main
+    - markdown
+    - jquery.jcarousel
+    - jquery.ui
+
+  javascripts:
+
+    - jquery.jcarousel
+    - swfobject
+    - jquery.ui.core
+    - jquery.ui.widget
+    - jquery.ui.tabs
+    - front
+
+  has_layout:     true
+  layout:         layout
